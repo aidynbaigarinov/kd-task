@@ -21,6 +21,7 @@ var wg sync.WaitGroup
 
 // Scans the STDIN
 func scanInput(urls chan string, results chan Result, w *CustomCSVWriter) {
+	fmt.Printf("Input some urls:\n\n")
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		wg.Add(1)
